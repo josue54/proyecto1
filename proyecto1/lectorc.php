@@ -3,7 +3,7 @@
 $aux=$argv[1];//!isset($argv[1]){die"print"}
 $primeravez=true;
 $columnames=array();
-$consulta="insert into people";
+$consulta="insert into students";
 $values="values";
 $valores=" ";
 $usoconsulta=FALSE;
