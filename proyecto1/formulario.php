@@ -1,13 +1,4 @@
-<form name="form" method="post" action="<?=$_SERVER['PHP_SELF'];?>">
-      Nombre: <input type="text" name="nombre" /> <br />
-      Apellido: <input type="text" name="apellido" /> <br />
-      Correo: <input type="text" name="correo" /> <br />
-      Telefono: <input type="text" name="telefono" /> <br /> 
-      Cedula: <input type="text" name="cedula" /> <br />  
-      <input type="submit" name="submit" />
-    </form>
-
-    <?php 
+ <?php 
 
 
 if(isset($_POST["submit"])) 
@@ -23,11 +14,11 @@ if(isset($_POST["submit"]))
         echo "ERROR MESSAGE"; 
         die; 
     } 
-    date_default_timezone_set("America/Costa_Rica");
+date_default_timezone_set("America/Costa_Rica");
 $file=date("dmY");
-    $cvsData ='"Nombre","Apellido","Correo","Telefono","Cedula"'.PHP_EOL; 
-    $cvsData .= "\"$nombre\",\"$apellido\",\"$correo\",\"$telefono\",\"$cedula\"".PHP_EOL; 
-    $fp = fopen($file.".csv", "a"); 
+$cvsData ='"Nombre","Apellido","Correo","Telefono","Cedula"'.PHP_EOL; 
+$cvsData .= "\"$nombre\",\"$apellido\",\"$correo\",\"$telefono\",\"$cedula\"".PHP_EOL; 
+$fp = fopen($file.".csv", "a"); 
      
     if($fp) 
     { 
