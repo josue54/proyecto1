@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Capture Form Fields to CSV</title>
+<script type="text/javascript">
+<!--
+function saveValues() {
+    var frm = document.form1;
+
+    var record = ""
+            +       frm.text1.value
+            + "," + frm.text2.value
+            + "," + frm.text3.value
+            + "\n";
+
+    frm.textarea1.value += record;
+}
+
+function clearText() {
+    document.form1.textarea1.value = "";
+}
+//-->
+</script>
+</head>
+<body>
+<h1>Capture Form Fields to CSV</h1>
+
+<form name="form1" action="javascript:null">
+  <p>
+    F1: <input name="text1" type="text" value="field1" /><br />
+    F2: <input name="text2" type="text" value="field2"/><br />
+    F3: <input name="text3" type="text" value="field3"/>
+  </p>
+  <p>
+    <input name="save" type="button" value="Save"
+           onclick="saveValues(); return false"/>
+    &#0160;
+    <input name="clear" type="button" value="Clear"
+           onclick="clearText(); return false"/>
+  </p>
+  <p>
+    <i>Click 'Save' to add content</i><br />
+    <textarea name="textarea1" rows="5" cols="40"></textarea>
+  </p>
+</form>
+
+</body>
+</html>

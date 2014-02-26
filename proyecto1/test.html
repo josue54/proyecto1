@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<form name="form" method="post" action="<?=$_SERVER['PHP_SELF'];?>">
+      Name: <input type="text" name="name" /> <br />
+      Surname: <input type="text" name="surname" /> <br />
+      Home: <input type="text" name="home" /> <br /> 
+      <input type="submit" name="submit" />
+    </form>
+
+    <?php 
+
+if(isset($_POST["submit"])) 
+{ 
+    $name = $_POST["name"]; 
+    $surame = $_POST["surname"]; 
+    $home = $_POST["home"]; 
+     
+    if(empty($name)||empty($surame)||empty($home)) 
+    { 
+        echo "ERROR MESSAGE"; 
+        die; 
+    } 
+    $cvsData ='"Name","Surname","Home"'.PHP_EOL; 
+    $cvsData .= "\"$name\",\"$surame\",\"$home\"".PHP_EOL; 
+    $fp = fopen("test.csv", "a"); 
+     
+    if($fp) 
+    { 
+        fwrite($fp,$cvsData); // Write information to the file 
+        fclose($fp); // Close the file 
+    } 
+     
+     
+} 
+?>
+</body>
+</html>
