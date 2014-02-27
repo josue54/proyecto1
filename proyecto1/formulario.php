@@ -16,8 +16,7 @@ if(isset($_POST["submit"]))
     } 
 date_default_timezone_set("America/Costa_Rica");
 $file=date("dmY");
-$cvsData ='"Nombre","Apellido","Correo","Telefono","Cedula"'.PHP_EOL; 
-$cvsData .= "\"$nombre\",\"$apellido\",\"$correo\",\"$telefono\",\"$cedula\"".PHP_EOL; 
+$cvsData = "\"$nombre\",\"$apellido\",\"$correo\",\"$telefono\",\"$cedula\"".PHP_EOL; 
 $fp = fopen($file.".csv", "a"); 
      
     if($fp) 
@@ -28,5 +27,5 @@ $fp = fopen($file.".csv", "a");
      
      
 } 
-
+header('refresh:5;url=index.html');
 ?>
