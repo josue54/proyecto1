@@ -1,0 +1,40 @@
+body
+{
+	font-family: "Helvetica", Arial;
+	background-size: 124%;
+	background-repeat: no-repeat;
+
+}
+
+#text{
+	width: 96.3%;
+	margin-top: 37px;
+	float: left;
+	box-shadow: 0px 0px 70px rgba(0,0,0,1);
+	text-align: left;
+	border-radius: 20px;
+	padding: 20px;
+	background-color:#A9A9A9;
+	height: auto; 
+
+
+}
+#general{
+	width: 100%;
+	height: auto; 
+
+}
+
+#reg
+{
+	height: auto; 
+	width: 50%;
+	background-color: #1F5C99;
+	text-align: center;
+	color: #ffffff;
+	margin: 0 auto;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+
+}
