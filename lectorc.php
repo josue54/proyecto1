@@ -28,15 +28,10 @@ if (($gestor = fopen($aux, "r")) !== FALSE) {
             $consulta.=" ".$valores;
             echo $consulta;
             $usoconsulta=true;
-
-           // $resEmp = mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
-            
-         if($usoconsulta==true){
-        $consulta=$stringconsulta;
-        $usoconsulta=FALSE;
-        $valores=" ";
-        }
-        break; 
+         // $resEmp = mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+            $consulta=$stringconsulta;
+            $valores=" ";
+            break; 
 }
          
     }
