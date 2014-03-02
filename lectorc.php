@@ -2,8 +2,6 @@
 <?php
 //$conexion = mysqli_connect("localhost", "admin", "12345","example");
 $aux=$argv[1];//!isset($argv[1]){die"print"}
-$primeravez=true;
-$columnames=array();
 $consulta="insert into students (nombre,apellido,correo,telefono,cedula) values";
 $valores=" ";
 $usoconsulta=FALSE;
@@ -33,13 +31,10 @@ if (($gestor = fopen($aux, "r")) !== FALSE) {
             $usoconsulta=true;
 
            // $resEmp = mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
-            
-         if($usoconsulta==true){
-        $consulta=$stringconsulta;
-        $usoconsulta=FALSE;
-        $valores=" ";
-        }
-        break; 
+              $consulta=$stringconsulta;
+              $usoconsulta=FALSE;
+              $valores=" ";
+              break; 
 }
          
     }
