@@ -1,7 +1,7 @@
  <?php 
 
 
-if(isset($_POST["submit"])) 
+if(isset($_POST["submit"])) // metodo post el cual efectua una accion en caso de darse el submit
 { 
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
@@ -9,20 +9,20 @@ if(isset($_POST["submit"]))
     $telefono = $_POST["telefono"];
     $cedula = $_POST["cedula"]; 
     
-    if(empty($nombre)||empty($apellido)||empty($correo)||empty($telefono)||empty($cedula)) 
+    if(empty($nombre)||empty($apellido)||empty($correo)||empty($telefono)||empty($cedula)) // validaciones
     { 
         echo "ERROR MESSAGE"; 
         die; 
     } 
-date_default_timezone_set("America/Costa_Rica");
+date_default_timezone_set("America/Costa_Rica");// se declara la zona horaria
 $file=date("dmY");
 $cvsData = "\"$nombre\",\"$apellido\",\"$correo\",\"$telefono\",\"$cedula\"".PHP_EOL; 
 $fp = fopen($file.".csv", "a"); 
      
-    if($fp) 
+    if($fp) // en caso de encontrarse el archivo
     { 
-        fwrite($fp,$cvsData); // Write information to the file 
-        fclose($fp); // Close the file 
+        fwrite($fp,$cvsData); // escribe en el
+        fclose($fp); // lo cierra
     } 
      
      
