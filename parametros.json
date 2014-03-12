@@ -7,6 +7,10 @@
 "ip":"localhost",
 "usuario":"admin",
 "clave":"12345",
-"bd":"example"
+"bd":"example",
+"destinatario":"jraabarca@gmail.com",
+"remitente":"jraabarca@gmail.com",
+"usuariocorreo":"jraabarca@gmail.com",
+"clavecorreo":"101700qaz",
 }
 }

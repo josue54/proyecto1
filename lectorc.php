@@ -7,7 +7,7 @@ $ip=$data["parametros"]["ip"];
 $usuario=$data["parametros"]["usuario"];
 $clave=$data["parametros"]["clave"];
 $bd=$data["parametros"]["bd"];
-var_dump($ip);
+
 
 $conexion = mysqli_connect($ip,$usuario,$clave,$bd);
 $consulta="insert into students (nombre,apellido,correo,telefono,cedula) values";
@@ -18,6 +18,7 @@ $aux3;
 $aux4;
 $aux5;
 $aux6;
+$contador=0;
 
 date_default_timezone_set("America/Costa_Rica");
 $file=date("dmY");
@@ -41,7 +42,7 @@ if (($gestor = fopen($archivo, "r")) !== FALSE) {
             $valores="(\"$aux2\",\"$aux3\",\"$aux4\",\"$aux5\",\"$aux6\")";
             $consulta.=" ".$valores;
             echo $consulta;
-
+            contador++;
             $resEmp = mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
             echo "datos insertados";
               $consulta=$stringconsulta;
