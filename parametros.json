@@ -1,0 +1,12 @@
+
+{
+"parametros":
+{
+
+
+"ip":"localhost",
+"usuario":"admin",
+"clave":"12345",
+"bd":"students"
+}
+}
