@@ -1,7 +1,6 @@
 
 <?php
 //$conexion = mysqli_connect("localhost", "admin", "12345","example");
-$aux=$argv[1];//!isset($argv[1]){die"print"}
 $consulta="insert into students (nombre,apellido,correo,telefono,cedula) values";
 $valores=" ";
 $usoconsulta=FALSE;
@@ -13,7 +12,10 @@ $aux5;
 $aux6;
 
 
-if (($gestor = fopen($aux, "r")) !== FALSE) {
+date_default_timezone_set("America/Costa_Rica");
+$file=date("dmY");
+
+if (($gestor = fopen($file.".csv", "r")) !== FALSE) {
     while (($datos = fgetcsv($gestor, 1000, ",")) !== FALSE) {
         $numero = count($datos);
          
