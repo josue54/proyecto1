@@ -2,6 +2,7 @@
 require('class.phpmailer.php');//importa la clase php mailer
 require('class.smtp.php');//importo el servidor para autenticar
 
+date_default_timezone_set("America/Costa_Rica");// declaro la zona horaria
 
 file_get_contents("c://xampp/htdocs/proyecto1/parametros.json");//busco el archivo json de parametros
 $json = file_get_contents("c://xampp/htdocs/proyecto1/parametros.json");//busco el archivo json de parametros
@@ -31,7 +32,7 @@ $aux6;
 $contador=0;
 $mensaje="registros insertados =";// se crea un mensaje para enciar al correo
 
-date_default_timezone_set("America/Costa_Rica");// declaro la zona horaria
+
 $file=date("dmY");//se crea el nombre que ira en el csv
 $archivo="c://xampp/htdocs/proyecto1/";// se declara una string con la ruta donde estara el csv
 $archivo=$archivo.$file.".csv";// se le concatena el formato
